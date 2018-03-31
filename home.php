@@ -1,4 +1,10 @@
-<html>
+<?php
+session_start();
+if(isset($_SESSION['username'])){
+    $_SESSION['username']="yes";
+}
+?><html>
+    <link href="manifest.json" rel="manifest"/>
     <head>
     <title>Education In India</title><link href="images/logo.png" rel="icon" type="x-icon/image">
         <meta charset="UTF-8">
@@ -38,7 +44,9 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About us</a></li>
         <li><a href="#con">Contact</a></li>
-        <li><a href="login.html">login</a></li>
+        <li><a href='login.php'>login</a></li>
+        <li><a href="help.pdf">Help</a></li>
+         
          
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -207,6 +215,22 @@
                 <p class="text-center">Get confused where to start? </p> 
                 <p class="text-center">Click here to Start by selecting your requirements</p>
                 <p class="text-center"><a href="main.html" class="primary-btn d-inline-flex align-items-center">Get Started</a></p>
+            </div>
+            <div class="centereddiv2">
+                <h1 class="text-center">Prepare for Entrance Exams</h1>
+                <p class="text-center">Select entrance exam and get to know hoe to prepare for that.</p>
+                <form action="exam.php" method="POST">
+                <select class="text-center" name="exam">
+                    <option>Select Exam</option>
+                    <option>JEE MAINS</option>
+                    <option>JEE Advanced</option>
+                    <option>JIPMER</option>
+                    <option>NEET</option>
+                </select>
+                <div class="" >
+                    <button class="btn" name="submit">Submit</button>
+                </div>
+            </form>
             </div>
                   
         </div>
@@ -389,5 +413,11 @@
         </footer>-->
         
 </body>
-
+if('serviceWorker' in navigator){
+    navigator.serviveWorker
+    .register('sw.js')
+    .then(function(){
+        console.log('service worker registered!');
+    });
+}
 </html>

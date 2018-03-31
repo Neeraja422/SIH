@@ -41,7 +41,8 @@ and open the template in the editor.
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About us</a></li>
                         <li><a href="#con">Contact</a></li>
-                        <li><a href="login.html">login</a></li>
+                        <li><a href="login.php">login</a></li>
+                        <li><a href="help.pdf">Help</a></li>
          
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -51,22 +52,22 @@ and open the template in the editor.
             <div class="row text-center">
                 <h1 class="heading-title"><img src="images/logo.png" style="width:50px ; height: 50px"> Education In India </h1>
             </div>
-            <div class="row">
-                <div class="col-md-2 container ">
+            <div class="row ">
+                <div class="col-md-2 part12">
                   <div class="container part1">
                     <div class="panel">
-                        <div class="panel-heading"><h3>Important Notice</h3></div>
+                        <div class="panel-heading"><h3>Latest Updates</h3></div>
                         <div class="panel-body">
-                            <marquee bgcolor="$D6D6D6" onMouseOver="this.scrollAmount=0" onMouseOut="this.scrollAmount=2" scrollamount="2" direction="up" loop="true">
-                                <center>
+                            <marquee  onMouseOver="this.scrollAmount=1" onMouseOut="this.scrollAmount=2" scrollamount="4" direction="up" style="align:left;"loop="true">
+                                
                                     <ul>
-                                        <li>msbjaskkac ajchkacjm zckzhdkac zkdjaksjcm,z ckasjcksjc</li>
-                                        <li>msbjaskkac ajchkacjm zckzhdkac zkdjaksjcm,z ckasjcksjc</li>
-                                        <li>msbjaskkac ajchkacjm zckzhdkac zkdjaksjcm,z ckasjcksjc</li>
-                                        <li>msbjaskkac ajchkacjm zckzhdkac zkdjaksjcm,z ckasjcksjc</li>
-                                        <li>msbjaskkac ajchkacjm zckzhdkac zkdjaksjcm,z ckasjcksjc</li>
+                                        <li><a href="https://jeemain.nic.in"><b>APPLICATIONS FOR JEE MAINS EXAMINATION ARE OUT!!!</b></a></li>
+                                        <li><a href="www.jipmer.edu.in"><b>JIMPER RESULTS ARE OUT!!!</b></a> </li>
+                                        <li><a href="www.lsr.edu.in"><b>VACANT SEATS IN LADY SHRI RAM COLLEGE..HURRY UR!!!</b></a> </li>
+                                        <li><a href="www.stanley.org"><b>NEW COURSES INTRODUCED IN STANLEY..CHECK OUT!!!</b></a></li>
+                                        <li><a href="www.loyalacollege.edu/"><b>ARRIVAL OF NEW COMPANIES IN LOYALA COLLEGE!!</b></a></li>
                                     </ul>
-                                </center>  </marquee></div>  
+                                  </marquee></div>  
                         </div>
                     </div>
                  </div>
@@ -112,60 +113,90 @@ and open the template in the editor.
                                                     ?>
 
                                                     <p><div class="container collapsepart">
-                                                            <h2>Collapse</h2>
+                                                            <h2></h2>
                                                            
                                                              <div class="panel-group" id="accordion">
                                                                  <div class="panel panel-default" style="width: 110%">
                                                                         <div class="panel-heading">
                                                                             <h4 class="panel-title">
-                                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">National Insitute Of Technology Raipur</a>
+                                                                <form action="getdata.php" method="POST">
+                                                                                <a name="collegename" data-toggle="collapse" data-parent="#accordion" href="#collapse1">National Insitute Of Technology Raipur</a>
                                                                             </h4>
                                                                         </div>
                                                                          <div id="collapse1" class="panel-collapse collapse in">
-                                                                               <div class="panel-body"><br>
-                                                                <button class="btn">Go to Official Website</button>
-                                                                <button class="btn">Add to dashboard</button>
-</div>
+                                                                               <div class="panel-body">
+
+                                                                                <p name="about"> National Institute of Technology, Raipur (NIT Raipur), formerly Government Engineering College Raipur,[1] is a technical institution funded by the Government of India located in Raipur, Chhattisgarh, India. Founded in 1956 as Government College of Mining & Metallurgy with two engineering disciplines, mining and metallurgy, the institute is one of the oldest of its kind in India. Currently it is one of the National Institutes of Technology, which have been accorded Institute of National Importance status by the National Institutes of Technology Act, 2007.</p>
+                                                                                <p name="location"><h3>Location</h3> : NIT Raipur, G.E Road, Raipur, Chhattisgarh 492001</p>
+                                                                                <p name="facilities"><h3>Facilities </h3>:Each hostel is self-contained with amenities such as common room and a dining hall with mess. All the hostel rooms are adequately furnished. Each hostel has a capacity to house about 100 inmate students. Administrative head of each hostel, the warden, is a senior faculty member. Additionally, one caretaker/matron for each hostel exists to manage the day-to-day affairs of the hostel. Each hostel has different students working committees, mess committee, magazine committee, games committee, cleanliness committee etc.</p>
+                                                                                <p name="courses">Courses Offered: Bachelor of Computer Science Engineering,Bachelor of Computer Science Engineering,Bachelor of Information Technology,Bachelor of Electrical Engineering,Bachelor of Chemical Engineering</p>
+                                                                                <p name="entrance"><h3>Entrance Exams</h3>: JEE MAINS</p>
+                                                                                <button class="btn" name="submitexam">Add this exam to Dashboard</button>
+                                                                                <button class="btn"><a href="www.jeemain.nic.in">Go to official website</a></button>
+                                                                                <br><p name="placements"><h3>Placements</h3> :The placement of the institute is very good. Around 30-40 companies visit campus every year for campus recruitment. The placement percentage is also very good, around 70-80%. Most companies are software based which includes OFSS, HP, Polaris, Infosys, cognizant which are mass recruiters. Also there are some companies which offer high package around 10 LPA like YODLEE, PSUs also visit which offers above 10 LPA like coal India. So the average package is 4-5 LPA.
+                                                                                </p>
+                                                                                <br>
+                                                                <button class="btn"><a href="www.nitrr.ac.in">Go to Official Website</a></button>
+                                                                <button class="btn" name="submit">Add to dashboard</button></form>
+                                                        </div>                                      
                                                                            </div>                                                              
                                                                   </div>
                                                                  <div class="panel panel-default" style="width: 110%">
                                                                           <div class="panel-heading">
                                                                                 <h4 class="panel-title">
-                                                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 2</a>
+                                                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">National Institute of Technology, Warangal (NIT Warangal or NITW) </a>
                                                                                  </h4>
                                                                             </div>
                                                                            <div id="collapse2" class="panel-collapse collapse">
-                                                                                  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                                                                                  <div class="panel-body">
+                                                                                    <p>The National Institute of Technology, Warangal (NIT Warangal or NITW) is a public engineering institution located in Warangal, India. It is recognised as an Institute of National Importance by the Government of India. The foundation stone for this institute was laid by then Prime Minister Jawaharlal Nehru on October 10, 1959, the first in the chain of 30 NITs (formerly known as RECs) in the country. The institute was renamed as the National Institute of Technology, Warangal in September 2002.</p>
+                                                                                    <p><h3>Location </h3>:National Institute of Technology Campus, Warangal, Telangana 506004</p>
+                                                                                    <p><h3>Facilities</h3> :The Institute has excellent residential facilities for all the students admitted to the various courses. There are twenty hostel blocks (halls of residence) for men and two for women.Hostel administration is managed by a Chief Warden and a team of Wardens drawn from the faculty and appointed by the Director on a tenure basis. Hostel Advisory Council headed by the Director is responsible for major policy decisions with respect to the hostel administration. Hostel Executive Committee takes decisions on routine matters. Students have representation on both the administrative bodies. Hostel office has full-fledged supporting staff and other workers.
+</p>
+                                                                                    <p>><h3>Entrance Exams</h3>: JEE MAINS</p>
+                                                                                <button class="btn">Add this exam to Dashboard</button>
+                                                                                <button class="btn"><a href="www.jeemain.nic.in">Go to official website</a></button></p>
+                                                                                    <p><h3>placements</h3>:Annual Salary of Rs 24 lakh offered by CodeNation.
+                                    Annual Salary of Rs 18 lakh offered by Amazon.
+Annual Salary of Rs 15 lakh plus benefits offered by Flipkart.</p>
+                                                                                        <button class="btn"><a href="www.nitw.ac.in">Go to Official Website</a></button>
+                                                                                        <form action="getdata.php" method="POST">
+                                                                                          <button class="btn">Add to dashboard</button></form>
+                                                                                      
+                                                                                  </div>
                                                                             </div>
                                                                     </div>
                                                                     <div class="panel panel-default" style="width: 110%">
                                                                           <div class="panel-heading">
                                                                                 <h4 class="panel-title">
-                                                                                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 3</a>
+                                                                                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">JSS Academy of Technincal Education </a>
                                                                                 </h4>
                                                                             </div>
                                                                             <div id="collapse3" class="panel-collapse collapse">
-                                                                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>   
+                                                                                    <div class="panel-body">
+                                                                                      <button class="btn">Go to Official Website</button>
+                                                                                  <button class="btn">Add to dashboard</button>
+                                                                                    </div>   
                                                                             </div>
                                                                     </div>
                                                                     <div class="panel panel-default" style="width: 110%">
                                                                           <div class="panel-heading">
                                                                                 <h4 class="panel-title">
-                                                                                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 3</a>
+                                                                                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Indian Institute Of Technology, Madras</a>
                                                                                 </h4>
                                                                             </div>
                                                                             <div id="collapse3" class="panel-collapse collapse">
-                                                                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>   
+                                                                                    <div class="panel-body">Body</div>   
                                                                             </div>
                                                                     </div>
                                                                     <div class="panel panel-default" style="width: 110%">
                                                                           <div class="panel-heading">
                                                                                 <h4 class="panel-title">
-                                                                                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 3</a>
+                                                                                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Indian Institute of Technology, Madras.</a>
                                                                                 </h4>
                                                                             </div>
                                                                             <div id="collapse3" class="panel-collapse collapse">
-                                                                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>   
+                                                                                    <div class="panel-body">Body</div>   
                                                                             </div>
                                                                     </div>
                                                              </div> 
@@ -585,41 +616,41 @@ and open the template in the editor.
                                                                  <div class="panel panel-default" style="width: 110%">
                                                                           <div class="panel-heading">
                                                                                 <h4 class="panel-title">
-                                                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 2</a>
+                                                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Inidan Institue Of Technology,Bombay</a>
                                                                                  </h4>
                                                                             </div>
                                                                            <div id="collapse2" class="panel-collapse collapse">
-                                                                                  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                                                                                  <div class="panel-body">Body</div>
                                                                             </div>
                                                                     </div>
                                                                     <div class="panel panel-default" style="width: 110%">
                                                                           <div class="panel-heading">
                                                                                 <h4 class="panel-title">
-                                                                                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 3</a>
+                                                                                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Indian Institue Of Technology, Madras</a>
                                                                                 </h4>
                                                                             </div>
                                                                             <div id="collapse3" class="panel-collapse collapse">
-                                                                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>   
+                                                                                    <div class="panel-body">Body</div>   
                                                                             </div>
                                                                     </div>
                                                                     <div class="panel panel-default" style="width: 110%">
                                                                           <div class="panel-heading">
                                                                                 <h4 class="panel-title">
-                                                                                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Collapsible Group 3</a>
+                                                                                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">JSS Academy of Technical Education</a>
                                                                                 </h4>
                                                                             </div>
                                                                             <div id="collapse4" class="panel-collapse collapse">
-                                                                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>   
+                                                                                    <div class="panel-body">body</div>   
                                                                             </div>
                                                                     </div>
                                                                     <div class="panel panel-default" style="width: 110%">
                                                                           <div class="panel-heading">
                                                                                 <h4 class="panel-title">
-                                                                                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Collapsible Group 3</a>
+                                                                                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">SRM University</a>
                                                                                 </h4>
                                                                             </div>
                                                                             <div id="collapse5" class="panel-collapse collapse">
-                                                                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>   
+                                                                                    <div class="panel-body">body</div>   
                                                                             </div>
                                                                     </div>
                                                              </div> 

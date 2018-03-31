@@ -1,4 +1,8 @@
 
+body{
+	height: 100%;
+	width: 100%;
+}
 nav{
     position : fixed;
     width:100%;
@@ -12,61 +16,36 @@ nav a{
     margin-left: 30px;
     line-height: 50px;
     color: #fff;
-}.demo{ background: #eee; }
-.maintab{
-    background-color: #D6D6D6;
 }
-.subtab1{
-    background-color: #eee;
-}
-.subtab2{
-    background-color: #eee;
-}
-.subtab3{
-    background-color: #eee;
-}
-.subtab4{
-    background-color: #eee;
-}
-.part1{
-    width: 15%;
-padding: 10px;
-    margin-left: 30px;
-    margin-bottom: 30px; 
-    border-radius: 10px;
+.sidebar{
+	padding: 10px;
+	margin-left: 30px;
+	margin-bottom: 30px; 
+	border-radius: 10px;
     background-color: rgba(0,0,0,.5);
-    height: 85%;
-    position: fixed;
-    float: left;
-    color: #D6D6D6;
-
+	height: 100%;
+	position: fixed;
+	float: left;
+	color: #D6D6D6;
 
 }
-.part12{
-    height: 25%;
+.demo ul li{
+	display: block;
+	background-color: #eee;
+	color: grey;
 }
-.collapsepart{
-    width: 80%;
-    margin-left: -25px;
+
+.demo{ background: #eee;
+height: 100%; }
+
+.heading-title{
+	margin-top: 50px;
 }
 .part2{
-    height: 100%;
-}
-a:hover,a:focus{
-    outline: none;
-    text-decoration: none;
+	float: right;;
+	background-color: #D6D6D6;
 }
 
-
-html, body{
-    font-family: Eco 2;
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-}
 .tab .nav-tabs{
     display: inline-block;
     background: #fff;
@@ -97,18 +76,13 @@ html, body{
     color: #fff;
     border: none;
 }
-.heading-title
-{
-	margin-top: 50px;
-	margin-bottom: 10px;
+
+li a, li a:hover{a
+    color:black!important;
+    outline: none;
+    text-decoration: none!important;
 }
-.tab .nav-tabs li.active a,
-.tab .nav-tabs li.active a:focus,
-.tab .nav-tabs li.active a:hover{
-    border: none;
-    background: #ffa399;
-    color: #fff;
-}
+
 
 .tab .tab-content{
     font-size: 14px;
@@ -118,6 +92,14 @@ html, body{
     padding: 5px 20px;
 }
 
+.matter{
+    position:relative;
+     text-align:left;
+   margin-left:20px;
+    border-left: 2px solid gray ;
+    padding: 1em;
+    
+}
 .tab .tab-content h3{
     font-size: 22px;
     color: #5b5a5a;
@@ -133,12 +115,9 @@ html, body{
         margin-bottom: 5px;
     }
 }
-/* CSS Document */
 
 
-footer{
-    height:auto;
-    width: 100%;
-    z-index: 99;
-    text-align: center;
+.collapsepart{
+	margin-left: -30px;
+    width: 80%;
 }

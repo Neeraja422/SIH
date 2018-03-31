@@ -1,17 +1,4 @@
-<?php
 
-$country = array("--Select Country--","Australia","Bangladesh","Canada","Denmark",
-"Europe","France","Germany","Indonesia","USA");
-
-$gender = array("--Select Gender--","Female","Male","Others");
-
-  $host = "localhost";
-  $user = "root";
-  $pass = "";
-  $database = "sih";
-
-
- ?>
 <!--<!DOCTYPE html>-->
 <html >
 <head>
@@ -38,7 +25,9 @@ a{
 
 <body>
     <div class="container1">
-  <form class='login-form' method="post">
+  <form class='login-form' method="post" action="sign.php">
+      <span class="close" id="one" style="float:right;" onclick='this.parentNode.parentNode.removeChild(this.parentNode); opreturn false;'><a class="closelink" style="text-decoration: none;
+    color:#D6D6D6;" href="home.php"> x</a></span><br>
   <div class="flex-row">
     <input id="username" class='lf--input' placeholder='Enter USERNAME' type='text' name="username">
   </div>
@@ -47,18 +36,21 @@ a{
   </div>
 
   <div class="flex-row">
-  <select class="selected_country" name="selected_country_option">
-    <?php
-  foreach($country as $val) { echo "<option>".$val."</option>";};
-     ?>
+  <select class="selected_country" name="country">
+    <option>Select Country</option>
+    <option>Australia</option>
+    <option>Germany</option>
+    <option>Canada</option>
+    <option>France</option>
+    <option>Italy</option>
   </select>
   </div>
 
   <div class="flex-row">
-  <select class="selected_gender" name="selected_gender_option">
-    <?php
-  foreach($gender as $val) { echo "<option>".$val."</option>";};
-    ?>
+  <select class="selected_gender" name="gender">
+    <option>Select Gender</option>
+    <option>Male</option>
+    <option>Female</option>
   </select>
   </div>
 

@@ -3,21 +3,20 @@ session_start();
 if (isset($_POST['submit'])) 
 {
 
-$con = mysqli_connect("localhost","root","","sih");
+$con = mysqli_connect("localhost","root","","nsih");
 
 $email = mysqli_real_escape_string($con,$_POST['email']);
 $password = md5(mysqli_real_escape_string($con,$_POST['password']));
 
-$res = mysqli_query($con,"select * from users where email='$email' and password='$password';");
-
-$row = mysqli_fetch_array($res,MYSQLI_ASSOC);
+$res = mysqli_query($con,"select * from login where email='$email' and password='$password';");
+$row=mysqli_fetch_assoc($res);
 $count = mysqli_num_rows($res);
 
 if($count == 1) 
       {
-         $_SESSION['uname'] = $row['uname'];
+        $_SESSION['username']=$row['username'];
          $_SESSION['email'] = $row['email'];
-         $_SESSION['location'] = $row['location'];
+         $_SESSION['password'] = $row['password'];
          header("location: dashboard.php");
       }else 
       {
@@ -37,6 +36,8 @@ if($count == 1)
 <body>
     <div class="container1">
   <form class='login-form' method="post">
+     <span class="close" id="one" style="float:right;" onclick='this.parentNode.parentNode.removeChild(this.parentNode); opreturn false;'><a class="closelink" style="text-decoration: none;
+    color:#D6D6D6;" href="home.php"> X</a></span><br>
   <div class="flex-row">
     <input id="email" class='lf--input' placeholder='Email Address' type='text' name="email">
   </div>
@@ -49,7 +50,6 @@ if($count == 1)
 
 </form>
 
- <label id="lf--errormsg"><?php echo ($_SESSION["err"]); ?></label>
     </div>
 
 </body>

@@ -1,6 +1,5 @@
-<?php 
-session_start();
-$_SESSION['login'] = 'yes' ;
+<?php
+include_once 'sign.php';
 ?>
 
 
@@ -17,9 +16,15 @@ $_SESSION['login'] = 'yes' ;
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/bootstrap.min.js"></script>        
-        <link rel="stylesheet" href="css/dash.css"> 
-    </script> 
+        <link rel="stylesheet" href="css/dash.css">  
     </head>
+    <style>
+    li a,li a:hover{
+      text-decoration: none;
+      color:black;
+      padding:10px;
+    }
+  </style>
     <body>
         <div id="home">
         <nav  data-spy="affix" data-offset-top="50">
@@ -40,15 +45,12 @@ $_SESSION['login'] = 'yes' ;
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="home.html #about">About us</a></li>
-                        <li><a href="home.html #con">Contact</a></li>
-                        <?php 
-                        if(!isset($_SESSION['login']))
-                        echo "<li><a href='login.html'>login</a></li>" ;
-                        else
-                        echo "<li><a href='profile.html'>Profile</a></li>" ;
-                        ?>
+                        <li><a href="home.php">Home</a></li>
+                        <li><a href="home.php #about">About us</a></li>
+                        <li><a href="home.php #con">Contact</a></li>
+                        <li><a href='profile.php'>Profile</a></li>
+                        <li><a href="main.html">Search</a></li>
+                        <li><a href="help.pdf">Help</a></li>
          
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -63,14 +65,15 @@ $_SESSION['login'] = 'yes' ;
             <div class="row">
                 <div class="col-md-2 text-center container sidebar ">
                     <img src="images/user.png" alt="userlogo" style="width:80% ; height: 22%">
-                    <h3 class="text-center">User Name</h3>
+                    <h3 class="text-center">Username</h3>
                     <p class="text-center">user@email.com</p>
                     <br><br>
                     <ul class="list-group list-unstyled">
-                        <li class="list-group-item">Settings</li>
-                        <li class="list-group-item">Profile</li>
-                        <li class="list-group-item"><a href="dashboard.php">Dashboard</a></li>
-                        <li class="list-group-item"><a href="logout.php">Logout</a></li>
+                        <li class="list-group-item"><a href="settings.php">Settings</a></li>
+                        <li class="list-group-item"><a href="profile.php">Profile</a></li>
+                        <li class="list-group-item active"><a href="dashboard.php">Dashboard</a></li>
+                        <li class="list-group-item"><form action="logout.php" method="POST">
+                          <button type="submit" name="submit">Logout</button></form></li>
                     </ul>
                 </div>
 
@@ -128,10 +131,10 @@ $_SESSION['login'] = 'yes' ;
                                                     </div> <div class="panel panel-default" style="width: 110%">
                                                            <div class="panel-heading">
                                                               <h4 class="panel-title">
-                                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 2</a>
+                                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 2</a>
                                                               </h4>
                                                              </div>
-                                                             <div id="collapse2" class="panel-collapse collapse">
+                                                             <div id="collapse3" class="panel-collapse collapse">
                                                                      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
                                                             </div>
                                                     </div>
@@ -139,6 +142,10 @@ $_SESSION['login'] = 'yes' ;
                                      </div>
                                  </p>
                             </div>
+                          </div>
+                        
+
+
                             <div role="tabpanel" class="tab-pane fade" id="Section2">
                                 <h3>Section 2</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>
@@ -148,8 +155,37 @@ $_SESSION['login'] = 'yes' ;
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="Section4">
-                                <h3>Section 4</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>
+                                
+                                
+                        
+                          <div class="jumbotron">
+                                      <form method="POST" onsubmit="return validateForm()"  action="" >
+                                        <table class="table table-striped table-bordered table-responsive">
+                                          <div class="form-group">
+                                                <tr>
+                                                    <th>EXAM NAME</th>
+                                                    <th>DATE OF EXAM</th>
+                                                    <th>PLACE</th>
+                                                </tr>
+                                                <tr>
+                                                        <td> <input type="text"  name="ex_name" required></td>
+                                                        <td> <input type="DATE" name="da_of_ex" required> </td>
+                                                        <td> <input type="text" name="pla" required> </td>
+                                                </tr>
+                                                <tr  id="another" style="display:none;">
+                                                        <td> <input type="text"  name="ex_name" required ></td>
+                                                        <td> <input type="text" name="da_of_ex" required> </td>
+                                                        <td> <input type="text" name="pla" required > </td>
+                                                </tr>
+                                              </div>
+                                                </table>
+
+                                                <input type="submit" class="btn btn-primary "  name="remain" id="rem1" value="SET REMAINDER">
+                                                <input type="submit" class="btn btn-primary"   name="another" id="rem2" value="SET ANOTHER">
+                                                 </form>
+                </div>
+
+                                
                             </div>
                         </div>
                     </div>
@@ -161,4 +197,15 @@ $_SESSION['login'] = 'yes' ;
         </div><!--End of demo-->
 
      </body>
+     <script>
+      function validateForm() {
+      alert("YOUR RECORD HAS BEEN SAVED SUCCESSFULLY");
+    }
+    
+  
+
+      $("#rem2").click(function(){
+        $("#another").show();
+      })
+     </script>
 </html>        

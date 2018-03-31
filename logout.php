@@ -1,8 +1,8 @@
 <?php
-   session_start();
-   unset($_SESSION["email"]);
-   unset($_SESSION["password"]);
-   
-   echo 'Logged out successfully';
-   header('Refresh: 2; URL = home.php');
+if(isset($_POST['submit'])){
+	session_start();
+	session_unset();
+	session_destroy();
+	header("Location: home.php");
+}
 ?>
